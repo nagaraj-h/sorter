@@ -1,8 +1,12 @@
 def sort(a, ascending=True):
-    for i in range(len(a)-1):
-        if a[i] > a[i+1]:
-            a[i],a[i+1] = a[i+1],a[i]
+    n = len(a)
+    for i in range(n):
+        for j in range(n-i-1):
+
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
     if ascending:
         return a
     else:
         return a[::-1]
+
